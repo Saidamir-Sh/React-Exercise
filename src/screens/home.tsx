@@ -8,8 +8,9 @@ export const HomeScreen = observer(() => {
   const store = useStore();
 
   return (
-    <Screen>
-      <H1 tx="welcome" />
+    <Screen title="Home">
+      <H1 tx="Hello" />
+      <H1 tx="How can I help you today" />
     </Screen>
   );
 });
