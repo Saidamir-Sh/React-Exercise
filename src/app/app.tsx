@@ -4,8 +4,9 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { Route, Routes } from "react-router-dom";
 
 import { initI18n } from "../i18n";
-import type { RootStore } from "../models";
+import { RootStore } from "../models";
 import { HomeScreen } from "../screens";
+import QuestionScreen from "../screens/question";
 import { baseTheme, GlobalStyles, ThemeProvider } from "../theme";
 import { setupRootStore, StoreProvider } from "./root-store";
 
@@ -31,6 +32,7 @@ function App() {
             <Suspense fallback={null}>
               <Routes>
                 <Route path="/" element={<HomeScreen />} />
+                <Route path="/condition" element={<QuestionScreen />} />
               </Routes>
             </Suspense>
           )}

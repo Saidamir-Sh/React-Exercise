@@ -64,15 +64,25 @@ export const H1 = styled(({ ...rest }: TextProps) => (
 ))`
   font-size: ${fontSize("h1")};
   font-weight: ${fontWeight("bold")};
-  color: ${(props) => color(props.isDisabled ? "primaryDisabled" : "primary")};
+  color: ${(props) => color(props.isDisabled ? "primaryDisabled" : "text")};
+  position: absolute;
+  width: 228px;
+  height: 160px;
+  left: 660px;
+  top: 206px;
 `;
 
 export const H2 = styled(({ ...rest }: TextProps) => (
   <Text as="h2" {...rest} />
 ))`
   font-size: ${fontSize("h2")};
-  font-weight: ${fontWeight("bold")};
-  color: ${(props) => color(props.isDisabled ? "primaryDisabled" : "primary")};
+  font-weight: ${fontWeight("regular")};
+  color: ${(props) => color(props.isDisabled ? "primaryDisabled" : "text")};
+  position: absolute;
+  width: 200px;
+  height: 160px;
+  left: 660px;
+  top: 256px;
 `;
 
 export const H3 = styled(({ ...rest }: TextProps) => (
