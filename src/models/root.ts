@@ -10,11 +10,13 @@ export interface Drug {
 
 export class RootStore {
   public condition?: string;
+  public duration?: string;
   public drugs?: Drug[];
 
   constructor() {
     makeObservable(this, {
       condition: observable,
+      duration: observable,
       setCondition: action,
       getRecommendedDrugs: action,
     });
@@ -24,16 +26,21 @@ export class RootStore {
     this.condition = value;
   }
 
+  public setDuration(value: string): void {
+    this.duration = value;
+  }
+
   public async getRecommendedDrugs(duration: string): Promise<any> {
     try {
       const response = await fetch(
         `http://localhost:3000/drugs?duration=${duration}`,
       );
       const data = await response.json();
-      this.drugs?.push(data);
-      console.log(this.drugs);
+      if (response.ok) {
+        this.drugs = data;
+      }
     } catch (error) {
-      alert(error);
+      return error;
     }
   }
 }

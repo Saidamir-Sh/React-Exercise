@@ -43,7 +43,7 @@ export const ButtonConditionTwo = styled(
   border-radius: 6px;
 `;
 
-export const ButtonCondition = styled(
+export const ButtonConditionInput = styled(
   ({ children, value, ...rest }: ButtonProps) => (
     <StyledBtn {...rest}>{children}</StyledBtn>
   ),
@@ -53,6 +53,19 @@ export const ButtonCondition = styled(
   height: 40px;
   left: 960px;
   top: 362px;
+  border-radius: 20px;
+`;
+
+export const ButtonDurationInput = styled(
+  ({ children, value, ...rest }: ButtonProps) => (
+    <StyledBtn {...rest}>{children}</StyledBtn>
+  ),
+)`
+  position: absolute;
+  width: 145px;
+  height: 40px;
+  left: 1115px;
+  top: 479px;
   border-radius: 20px;
 `;
 

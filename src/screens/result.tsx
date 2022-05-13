@@ -6,7 +6,8 @@ import {
   H2,
   H6,
   Screen,
-  ButtonCondition,
+  ButtonConditionInput,
+  ButtonDurationInput,
   ButtonDurationOne,
   ButtonDurationTwo,
 } from "../components";
@@ -14,13 +15,15 @@ import {
 export const ResultsScreen = observer(() => {
   // eslint-disable-next-line unused-imports/no-unused-vars
   const store = useStore();
+  console.log(store.drugs);
 
   return (
     <Screen title="Results - Bluspiran">
       <H1 tx="Hello, " />
       <H2 tx="How can I help you today?" />
       <H6 tx="How long has this been going on for?" />
-      <ButtonCondition>{store.condition}</ButtonCondition>
+      <ButtonDurationInput>{store.duration}</ButtonDurationInput>
+      <ButtonConditionInput>{store.condition}</ButtonConditionInput>
       <ButtonDurationOne value="SHORT">&lt;3 days</ButtonDurationOne>
       <ButtonDurationTwo value="LONG">Too long</ButtonDurationTwo>
     </Screen>
