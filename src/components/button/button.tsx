@@ -92,3 +92,14 @@ export const ButtonDurationTwo = styled(
   left: 965px;
   top: 815px;
 `;
+
+export const StyledRectangle = styled.div`
+  position: absolute;
+  width: 10px;
+  height: 142px;
+  left: 660px;
+  top: 642px;
+
+  background: #004fc1;
+  border-radius: 8px;
+`;

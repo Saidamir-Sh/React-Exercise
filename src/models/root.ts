@@ -11,7 +11,7 @@ export interface Drug {
 export class RootStore {
   public condition?: string;
   public duration?: string;
-  public drugs?: Drug[];
+  public drugs?: Drug;
 
   constructor() {
     makeObservable(this, {

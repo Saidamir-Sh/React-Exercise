@@ -58,7 +58,24 @@ export const Link = styled(({ ...rest }: LinkProps) => (
   color: ${(props) => color(props.isDisabled ? "primaryDisabled" : "primary")};
   text-decoration: none;
 `;
+export const H1Results = styled(({ ...rest }: TextProps) => (
+  <Text as="h1" {...rest} />
+))`
+  font-size: ${fontSize("h1")};
+  font-weight: ${fontWeight("bold")};
+  color: ${(props) => color(props.isDisabled ? "primaryDisabled" : "text")};
+  position: absolute;
+  width: 350px;
+  height: 34px;
+  left: 660px;
+  top: 579px;
+  font-family: "Helvetica Neue LT Pro";
+  line-height: 34px;
 
+  /* identical to box height, or 100% */
+
+  color: #191919;
+`;
 export const H1 = styled(({ ...rest }: TextProps) => (
   <Text as="h1" {...rest} />
 ))`
@@ -90,7 +107,13 @@ export const H3 = styled(({ ...rest }: TextProps) => (
 ))`
   font-size: ${fontSize("h3")};
   font-weight: ${fontWeight("bold")};
-  color: ${(props) => color(props.isDisabled ? "primaryDisabled" : "primary")};
+  color: ${(props) => color(props.isDisabled ? "primaryDisabled" : "text")};
+  position: absolute;
+  width: 165px;
+  height: 48px;
+  left: 693px;
+  top: 662px;
+  line-height: 24px;
 `;
 
 export const H4 = styled(({ ...rest }: TextProps) => (
