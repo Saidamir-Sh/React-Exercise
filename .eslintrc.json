@@ -132,6 +132,7 @@
         "format": ["PascalCase"]
       }
     ],
+
     "no-bitwise": "off",
     "@typescript-eslint/no-explicit-any": "warn",
     "no-nested-ternary": "off",

@@ -43,6 +43,19 @@ export const ButtonConditionTwo = styled(
   border-radius: 6px;
 `;
 
+export const ButtonCondition = styled(
+  ({ children, value, ...rest }: ButtonProps) => (
+    <StyledBtn {...rest}>{children}</StyledBtn>
+  ),
+)`
+  position: absolute;
+  width: 300px;
+  height: 40px;
+  left: 960px;
+  top: 362px;
+  border-radius: 20px;
+`;
+
 export const ButtonDurationOne = styled(
   ({ children, value, ...rest }: ButtonProps) => (
     <StyledBtn {...rest}>{children}</StyledBtn>

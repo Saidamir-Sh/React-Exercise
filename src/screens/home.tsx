@@ -30,7 +30,10 @@ export const HomeScreen = observer(() => {
       >
         I have a stomach ache
       </ButtonConditionOne>
-      <ButtonConditionTwo value="I have a cold">
+      <ButtonConditionTwo
+        onClick={(event) => GetConditionEvent(event.currentTarget.innerText)}
+        value="I have a cold"
+      >
         I have a cold
       </ButtonConditionTwo>
     </Screen>

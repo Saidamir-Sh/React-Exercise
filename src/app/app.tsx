@@ -7,6 +7,7 @@ import { initI18n } from "../i18n";
 import { RootStore } from "../models";
 import { HomeScreen } from "../screens";
 import QuestionScreen from "../screens/question";
+import ResultsScreen from "../screens/result";
 import { baseTheme, GlobalStyles, ThemeProvider } from "../theme";
 import { setupRootStore, StoreProvider } from "./root-store";
 
@@ -33,6 +34,10 @@ function App() {
               <Routes>
                 <Route path="/" element={<HomeScreen />} />
                 <Route path="/condition" element={<QuestionScreen />} />
+                <Route
+                  path="/drug/duration/:duration"
+                  element={<ResultsScreen />}
+                />
               </Routes>
             </Suspense>
           )}

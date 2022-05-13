@@ -11,13 +11,12 @@ import {
   ButtonDurationTwo,
 } from "../components";
 
-export const QuestionScreen = observer(() => {
+export const ResultsScreen = observer(() => {
   // eslint-disable-next-line unused-imports/no-unused-vars
   const store = useStore();
-  store.getRecommendedDrugs("SHORT");
 
   return (
-    <Screen title="Refinement Question">
+    <Screen title="Results - Bluspiran">
       <H1 tx="Hello, " />
       <H2 tx="How can I help you today?" />
       <H6 tx="How long has this been going on for?" />
@@ -28,4 +27,4 @@ export const QuestionScreen = observer(() => {
   );
 });
 
-export default QuestionScreen;
+export default ResultsScreen;
