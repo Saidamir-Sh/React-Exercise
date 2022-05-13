@@ -18,7 +18,6 @@ import {
 export const ResultsScreen = observer(() => {
   // eslint-disable-next-line unused-imports/no-unused-vars
   const store = useStore();
-  console.log(store.drugs);
 
   return (
     <Screen title="Results - Bluspiran">
